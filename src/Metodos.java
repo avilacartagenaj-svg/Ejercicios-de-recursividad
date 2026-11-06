@@ -58,4 +58,22 @@ public class Metodos {
 
         scanner.close();
     }
+
+    int contarDigitos(int n){
+        if (n < 10) {
+            return 1;
+        }
+        return 1 + contarDigitos(n / 10);
+    }
+
+    void punto4() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese un numero: ");
+        int numero = scanner.nextInt();
+
+        System.out.println("El numero " + numero + " tiene " + contarDigitos(numero) + " digitos");
+
+        scanner.close();
+    }
 }
