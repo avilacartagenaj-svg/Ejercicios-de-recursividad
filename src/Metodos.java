@@ -76,4 +76,21 @@ public class Metodos {
 
         scanner.close();
     }
+
+
+    String invertir(String cadena){
+        if (cadena.length() <= 1) {
+            return cadena;
+        }
+        return invertir(cadena.substring(1)) + cadena.charAt(0);
+    }
+
+    void punto5(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese una cadena: ");
+        String cadena = scanner.nextLine();
+
+        System.out.println("La cadena invertida es: " + invertir(cadena));
+    }
 }
